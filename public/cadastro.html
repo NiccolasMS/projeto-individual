@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="assets/js/sweetalert.js"></script>
+    <script src="assets/js/alertas.js"></script>
+    <title>Login</title>
+</head>
+
+<body class="body__login">
+
+    <audio id="som">
+        // Coloca um .ogg e um .mp3, porque assim, todos os navegadores irão aceitar!
+                <source src="assets/sound/efeito-sonoro-pop.ogg"/>
+                <source src="assets/sound/efeito-sonoro-pop.mp3"/>
+            </audio>
+
+    <div class="containerCadastro">
+        <form id="form_cadastro" class="card card-bordered faixa-borda divCadastro" method="post" onsubmit="return cadastrar()">
+            <img src="assets/img/logo_gc.png">
+            <div>
+                <span>Nome:</span>
+                <input name="nome" type="text" placeholder="Entre com o nome">
+            </div>
+            <div>
+                <span>Email:</span>
+                <input name="email" type="text" placeholder="Entre com seu usuário">
+            </div>
+            <div>
+                <span>Senha:</span>
+                <input name="senha" type="password" placeholder="Entre com sua senha">
+            </div>
+            <div>
+                <span>Confirmação de senha</span>
+                <input name="confirmacao-senha" type="password" placeholder="Confirme sua senha">
+            </div>
+            <div>
+                <button id="btn-cadastrar" class="btn__cadastrar">Cadastrar</button>
+            </div>
+            <span> Já tem uma conta? <a href="login.html">Logar-se!</a></span>
+        </form>
+    </div>
+    <div class="footer">
+        <p>© 2021 The Best Chasers - Todos os direitos reservados</p>
+    </div>
+
+    <script src="assets/js/comandosCSS.js"></script>
+</body>
+</html>
+<script>
+    function limparFormulario(){
+        document.getElementById('form_cadastro').reset();
+    }
+
+    function cadastrar() {
+
+        var formulario = new URLSearchParams(new FormData(document.getElementById("form_cadastro")));
+
+        var nome = formulario.get("nome");
+        var email = formulario.get("email");
+        var senha = formulario.get("senha");
+        var confirmacaoSenha = formulario.get("confirmacao-senha");
+
+        // TODO: VERIFICAR AS VALIDAÇÕES QUE ELES ESTÃO APRENDENDO EM ALGORITMOS 
+        if (nome == "" || email == "" || senha == "" || confirmacaoSenha == "") {
+            
+            window.alertaError("error","Tente novamente!","Preencha todos os campos para prosseguir!");
+            if (nome == "")  {
+                console.log('nome está em branco')
+            }
+            if (email == "" )  {
+                console.log('email está em branco')
+            }
+            if (senha == "" )  {
+                console.log('senha está em branco')
+            }
+            if (confirmacaoSenha == "" )  {
+                console.log('confirmacaoSenha está em branco')
+            }
+            
+            return false;
+        }
+        
+        if (email.indexOf("@") == -1 || email.indexOf(".com") == -1) {
+            window.alertaError('error',"Ops, e-mail inválido!", "Verifique e tente novamente.");
+            
+            return false;
+        }
+        
+        if (senha != confirmacaoSenha) {
+            window.alertaError('error',"Senhas não coincidem!","As senhas inseridas devem ser iguais para prosseguir!");
+            
+            return false;
+        }
+
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            body: formulario
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                window.alertaSuccess('success',"Cadastro realizado com sucesso!");
+
+                setTimeout (function(){
+                window.location = "login.html";
+                limparFormulario();
+                }, 2500);
+                
+            } else {
+                throw("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            
+        });
+
+        return false;
+    }
+
+</script>

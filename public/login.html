@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="assets/js/sweetalert.js"></script>
+    <script src="assets/js/alertas.js"></script>
+    <title>Login</title>
+</head>
+
+<body class="body__login">
+
+    <audio id="som">
+        // Coloca um .ogg e um .mp3, porque assim, todos os navegadores irão aceitar!
+                <source src="assets/sound/efeito-sonoro-pop.ogg"/>
+                <source src="assets/sound/efeito-sonoro-pop.mp3"/>
+            </audio>
+
+    <div class="containerLogin">
+        <form id="form_login" class="card card-bordered faixa-borda divLogin" method="post" onsubmit="return entrar()">
+            <img src="assets/img/logo_gc.png">
+            <div>
+                <span>Email:</span>
+                <input name="email" type="text" placeholder="Entre com seu usuário">
+            </div>
+            <div>
+                <span>Senha:</span>
+                <input name="senha" type="password" placeholder="Entre com sua senha">
+            </div>
+            <div>
+                <button id="btn-entrar" class="btn__entrar">Entrar</button>
+            </div>
+            <span> É novo em nossa plataforma? <a href="cadastro.html">Crie sua conta aqui!</a></span>
+        </form>
+    </div>
+    <div class="footer">
+        <p>© 2021 The Best Chasers - Todos os direitos reservados</p>
+    </div>
+
+    <script src="assets/js/comandosCSS.js"></script>
+</body>
+
+</html>
+<script>
+function entrar() {
+
+        var formulario = new URLSearchParams(new FormData(document.getElementById("form_login")));
+
+        var email = formulario.get("email");
+        var senha = formulario.get("senha");
+
+        console.log("FORM LOGIN: ", email);
+        console.log("FORM SENHA: ", senha);
+
+        // TODO: VERIFICAR AS VALIDAÇÕES QUE ELES ESTÃO APRENDENDO EM ALGORITMOS 
+        if (email == "" || senha == "") {
+            document.getElementById('som').play();
+            window.alertaError("error","Tente novamente!","Preencha todos os campos para prosseguir!");
+            
+            return false;
+        }
+
+        if (email.indexOf("@") == -1 || email.indexOf(".com") == -1) {
+            document.getElementById('som').play();
+            window.alertaError("error","Ops, e-mail inválido!","Verifique e tente novamente.");
+            
+            return false;
+        }
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            body: formulario
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
+                    document.getElementById('som').play();
+                    alertaSuccess("success", "Entrou!", `Seja bem-vindo, ${sessionStorage.NOME_USUARIO}!`);
+                    
+                    setTimeout(function () {
+                        window.location = "acesso.html";
+                    }, 2500); // apenas para exibir o loading
+
+                });
+
+            } else {
+                
+                window.alertaError('error','Houve um erro ao tentar realizar o login!', 'Usuário ou senha incorretos!')
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+    // function entrar() {
+    //     if (ipt_usuario.value == 'Admin' && ipt_senha.value == 'admin') {
+    //         document.getElementById('som').play();
+    //         // alertaSuccess("success", "Entrou!", `Seja bem-vindo, ${ipt_usuario.value}!`);
+    //         toastSuccess(`Logado com sucesso, ${ipt_usuario.value}!`)
+    //     } else {
+    //         document.getElementById('som').play();
+    //         // alertaError("error", "Tente novamente!", "Usuário ou senha inválidos!");
+    //         toastError(`Usuário ou senha inválidos!`)
+    //     }
+    // }
+</script>
