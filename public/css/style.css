@@ -383,6 +383,46 @@ margin-right: var(--mb-1-5);
     column-gap: .5rem;
 }
 
+/* ---------------- PERSONAGENS */
+
+.personagens__container{
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem 2rem;
+}
+
+.personagens__data{
+    text-align: center;
+}
+
+.personagens__img{
+    height: 220px;
+    width: 220px;
+    margin-top: var(--mb-0-75);
+    margin-bottom: var(--mb-0-75);
+    transition: .3s;
+}
+
+.personagens__title{
+    margin-bottom: var(--mb-0-25);
+}
+
+.personagens__data:hover .personagens__img{
+    transform: translateY(-.5rem);
+}
+
+.personagens__data .button{
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+.personagens__data .button:hover{
+    background-color: var(--primeira-cor);
+}
+
+.personagens__descricao{
+    margin-bottom: var(--mb-0-5);
+}
+
 .containerLogin{
     height: 90%;
     display: flex;
@@ -561,6 +601,7 @@ margin-right: var(--mb-1-5);
     justify-content: center;
     align-items: center;
     background-color: white;
+    margin-top: 4.5rem;
 }
 .footer p{
     color: #c01a11;
@@ -601,5 +642,73 @@ margin-right: var(--mb-1-5);
 @media screen and (max-width: 1366px){
     .containerCadastro{
         height: 90%;
+    }
+}
+
+@media screen and (min-width : 767px) {
+    body{
+        margin: 0;
+    }
+    .nav__img,
+    .nav__close,
+    .nav__toggle{
+        display: none;
+    }
+    .nav__list{
+        flex-direction: row;
+        column-gap: 3rem;
+    }
+    .nav__link{
+        text-transform: initial;
+        font-weight: var(--font-semi-bold);
+    }
+    .paginainicial__content{
+        padding: 8rem 0 2rem;
+    }
+    .nav{
+        height: 4.5rem;
+    }
+}
+
+@media screen and (min-width:992px) {
+    .container{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .section__title{
+        font-size: var(--h1-font-size);
+        margin-bottom: 3rem;
+    }
+    .paginainicial__content{
+        padding-top: 9rem;
+        gap: 3rem;
+    }
+    .paginainicial__group{
+        padding-top: 0;
+    }
+    .paginainicial__img{
+        height: 400px;
+        transform: translateY(-3rem);
+    }
+    .paginainicial__titulo{
+        margin-bottom: var(--mb-1-5);
+    }
+    .paginainicial__descricao{
+        margin-bottom: var(--mb-2-5);
+    }
+    .nav{
+        height: 4.5rem;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .paginainicial__img{
+        height: 420px;
+    }
+    .swiper-pagination{
+        margin-top: var(--mb-2-5);
+    }
+    .nav{
+        height: 4.5rem;
     }
 }

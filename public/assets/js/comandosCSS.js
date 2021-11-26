@@ -38,3 +38,14 @@ let homeSwiper = new Swiper('.home-swiper', {
       clickable: true
     },
   });
+
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2500,
+    delay: 400
+})
+
+sr.reveal('.home-swiper')
+sr.reveal('.section personagens, .section__title, .personagens__data', {interval: 100})
+sr.reveal('.section personagens, .section__title, .personagens__data', {origin: 'left'})
