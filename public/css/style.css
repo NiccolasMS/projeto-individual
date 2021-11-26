@@ -85,6 +85,7 @@ body{
 h1,h2,h3,h4{
     color: var(--titulo-cor);
     font-weight: var(--font-semi-bold);
+    text-align: center;
 }
 
 ul{
@@ -254,6 +255,21 @@ margin-right: var(--mb-1-5);
     margin-top: 2rem;
     height: 250px;
     justify-self: center;
+    animation: translate 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes translate {
+    from{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-1rem);
+
+    }
+    to{
+        transform: translateY(0);
+    }
 }
 
 .paginainicial__indicator{
@@ -309,11 +325,43 @@ margin-right: var(--mb-1-5);
 .paginainicial__arrowabaixo{
     text-align: center;
     margin-bottom: var(--mb-1);
+    animation: arrow 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes arrow{
+    from{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(.7rem);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+.paginainicial__buttons span i{
+    animation: leftarrow 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes leftarrow{
+    from{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(-.7rem);
+    }
+    to{
+        transform: translateX(0);
+    }
 }
 
 .paginainicial__buttons{
     display: flex;
     justify-content: space-between;
+}
+
+.paginainicial__buttons span{
+    text-align: center;
 }
 
 /* --------------SWIPER */
@@ -498,11 +546,11 @@ margin-right: var(--mb-1-5);
 }
 
 .containerLogin .divLogin span{
-    margin-top: var(--mb-1);
+    margin: var(--mb-1);
     color: #526484;
 }
 .containerCadastro .divCadastro span{
-    margin-top: var(--mb-1);
+    margin: var(--mb-1);
     color: #526484;
 }
 
@@ -618,7 +666,7 @@ margin-right: var(--mb-1-5);
     color: #c01a11;
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 425px){
     .containerLogin .divLogin{
         width: 65%;
     }
@@ -630,7 +678,17 @@ margin-right: var(--mb-1-5);
 }
 @media screen and (max-width: 768px){
     .containerLogin .divLogin{
-        width: 55%;
+        width: 60%;
+    }
+}
+@media screen and (max-width: 1024px){
+    .containerCadastro .divCadastro{
+        width: 45%;
+    }
+}
+@media screen and (max-width: 768px){
+    .containerCadastro .divCadastro{
+        width: 60%;
     }
 }
 

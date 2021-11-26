@@ -49,10 +49,11 @@
     origin: 'top',
     distance: '60px',
     duration: 2500,
-    delay: 400
+    delay: 300
 });
 
 srr.reveal('.divLogin')
+srr.reveal('.divLogin div',{interval: 300 }) 
 function entrar() {
 
         var formulario = new URLSearchParams(new FormData(document.getElementById("form_login")));
