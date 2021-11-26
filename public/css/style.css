@@ -601,7 +601,18 @@ margin-right: var(--mb-1-5);
     justify-content: center;
     align-items: center;
     background-color: white;
+}
+.footer__index{
+    border-top: 1px solid #e5e9f2;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
     margin-top: 4.5rem;
+}
+.footer__index p{
+    color: #c01a11;
 }
 .footer p{
     color: #c01a11;
@@ -620,28 +631,6 @@ margin-right: var(--mb-1-5);
 @media screen and (max-width: 768px){
     .containerLogin .divLogin{
         width: 55%;
-    }
-}
-@media screen and (max-width: 1920px){
-    .containerLogin{
-        height: 90vh;
-    }
-}
-@media screen and (max-width: 1366px){
-    .containerLogin{
-        height: 90%;
-    }
-}
-
-@media screen and (max-width: 1920px){
-    .containerCadastro{
-        height: 90vh;
-    }
-}
-
-@media screen and (max-width: 1366px){
-    .containerCadastro{
-        height: 90%;
     }
 }
 
@@ -710,5 +699,11 @@ margin-right: var(--mb-1-5);
     }
     .nav{
         height: 4.5rem;
+    }
+    .containerCadastro{
+        height: 90%;
+    }
+    .containerLogin{
+        height: 90%;
     }
 }

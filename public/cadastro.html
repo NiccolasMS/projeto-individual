@@ -47,11 +47,19 @@
     <div class="footer">
         <p>© 2021 The Best Chasers - Todos os direitos reservados</p>
     </div>
-
+    <script src="assets/js/scrollreveal.min.js"></script>
     <script src="assets/js/comandosCSS.js"></script>
 </body>
 </html>
 <script>
+        const srr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2500,
+    delay: 400
+});
+
+srr.reveal('.divCadastro')
     function limparFormulario(){
         document.getElementById('form_cadastro').reset();
     }

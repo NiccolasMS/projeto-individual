@@ -44,7 +44,8 @@ const sr = ScrollReveal({
     distance: '60px',
     duration: 2500,
     delay: 400
-})
+});
+
 
 sr.reveal('.home-swiper')
 sr.reveal('.section personagens, .section__title, .personagens__data', {interval: 100})
