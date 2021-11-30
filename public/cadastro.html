@@ -22,6 +22,32 @@
     <div class="containerCadastro">
         <form id="form_cadastro" class="card card-bordered faixa-borda divCadastro" method="post" onsubmit="return cadastrar()">
             <img src="assets/img/logo_gc.png">
+            <div class="div__perso">
+                <span>Selecione seu personagem favorito:</span>
+                <select name="personagemfav" class="select__personagem">
+                    <option value="">Selecione seu personagem favorito...</option>
+                    <option value="1">Elesis</option>
+                    <option value="2">Lire</option>
+                    <option value="3">Arme</option>
+                    <option value="4">Lass</option>
+                    <option value="5">Ryan</option>
+                    <option value="6">Ronan</option>
+                    <option value="7">Amy</option>
+                    <option value="8">Jin</option>
+                    <option value="9">Sieghart</option>
+                    <option value="10">Mari</option>
+                    <option value="11">Dio</option>
+                    <option value="12">Zero</option>
+                    <option value="13">Rey</option>
+                    <option value="14">Lupus</option>
+                    <option value="15">Lin</option>
+                    <option value="16">Azin</option>
+                    <option value="17">Holy</option>
+                    <option value="18">Edel</option>
+                    <option value="19">Veigas</option>
+                    <option value="20">Uno</option>
+                </select>
+            </div>
             <div>
                 <span>Nome:</span>
                 <input name="nome" type="text" placeholder="Entre com o nome">
@@ -35,7 +61,7 @@
                 <input name="senha" type="password" placeholder="Entre com sua senha">
             </div>
             <div>
-                <span>Confirmação de senha</span>
+                <span>Confirmação de senha:</span>
                 <input name="confirmacao-senha" type="password" placeholder="Confirme sua senha">
             </div>
             <div>
@@ -74,11 +100,16 @@ srr.reveal('.divCadastro div', {interval: 300} )
         var email = formulario.get("email");
         var senha = formulario.get("senha");
         var confirmacaoSenha = formulario.get("confirmacao-senha");
+        var personagemfav = formulario.get("personagemfav")
 
         // TODO: VERIFICAR AS VALIDAÇÕES QUE ELES ESTÃO APRENDENDO EM ALGORITMOS 
-        if (nome == "" || email == "" || senha == "" || confirmacaoSenha == "") {
+        if (nome == "" || email == "" || senha == "" || confirmacaoSenha == "" || personagemfav == "") {
             
             window.alertaError("error","Tente novamente!","Preencha todos os campos para prosseguir!");
+
+            if (personagemfav == "") {
+                console.log('personagem está em branco')
+            }
             if (nome == "")  {
                 console.log('nome está em branco')
             }

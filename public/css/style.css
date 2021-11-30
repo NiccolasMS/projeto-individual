@@ -505,7 +505,7 @@ margin-right: var(--mb-1-5);
 }
 .containerCadastro .divCadastro{
     background-color: #ffffff;
-    height: 830px;
+    height: 964px;
     width: 35%;
     display: flex;
     flex-direction: column;
@@ -641,6 +641,30 @@ margin-right: var(--mb-1-5);
     background-color: hsl(3, 84%, 41%);
     color: white;
 }
+
+.select__personagem{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url(http://www.webcis.com.br/images/imagens-noticias/select/ico-seta-appearance.gif) no-repeat #eeeeee;
+    background-position: 200px center;
+    width: 270px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgb(31 43 58 / 40%);
+    font-family: var(--body-font);
+    transition: .3s
+}
+
+.containerCadastro .divCadastro .div__perso {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    align-items: center;
+}
+
 
 .footer{
     border-top: 1px solid #e5e9f2;

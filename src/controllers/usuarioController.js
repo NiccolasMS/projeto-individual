@@ -24,6 +24,23 @@ function listar(req, res) {
     );
 }
 
+function contarChasers(req, res) {
+    usuarioModel.contarChasers()
+    .then(function (resultado) {
+        if (resultado.length > 0) {
+            res.status(200).json(resultado);
+        } else {
+            res.status(204).send("Nenhum resultado encontrado!")
+        }
+    }).catch(
+        function (erro) {
+            console.log(erro);
+            console.log("Houve um erro ao realizar a consulta! Erro: ", erro.sqlMessage);
+            res.status(500).json(erro.sqlMessage);
+        }
+    );
+}
+
 function entrar (req, res) {
     var email = req.body.email;
     var senha = req.body.senha;
@@ -63,15 +80,22 @@ function cadastrar(req, res) {
     var nome = req.body.nome;
     var email = req.body.email;
     var senha = req.body.senha;
+    var fkPersonagem = req.body.personagemfav;
+    console.log(fkPersonagem);
 
     if (nome == undefined) {
         res.status(400).send("Seu nome está undefined!");
-    } else if (email == undefined) {
+    }
+    else if (email == undefined) {
         res.status(400).send("Seu email está undefined!");
     } else if (senha == undefined) {
         res.status(400).send("Sua senha está undefined!");
-    } else {
-        usuarioModel.cadastrar(nome, email, senha)
+    }
+    else if (fkPersonagem == undefined) {
+        res.status(400).send("Seu nome está undefined!");
+    }
+    else {
+        usuarioModel.cadastrar(nome, email, senha, fkPersonagem)
         .then(
             function (resultado) {
                 res.json(resultado);
@@ -93,5 +117,6 @@ module.exports = {
     entrar,
     cadastrar,
     listar,   
-    testar
+    testar,
+    contarChasers
 }
