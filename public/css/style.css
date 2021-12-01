@@ -95,6 +95,10 @@ h1,h2,h3,h4{
     text-align: center;
 }
 
+.span_qtdcontas{
+    font-size: var(--h2-font-size);
+}
+
 ul{
     list-style: none;
 }
@@ -677,6 +681,51 @@ margin-right: var(--mb-1-5);
     align-items: center;
 }
 
+.acesso__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.acesso__selecione{
+    margin-top: 150px;
+}
+
+.acesso__cards{
+    display: flex;
+    gap: .5rem;
+}
+
+.acesso__cards .acesso_cardspersonagem a img{
+    text-decoration: none;
+    transition: .3s;
+}
+
+.acesso__cards .acesso_cardspersonagem a img:hover{
+    transform: translateY(-.5rem);
+}
+
+.acesso__cards2{
+    display: flex;
+    gap: .5rem;
+}
+
+.acesso__cards2 .acesso_cardspersonagem a img{
+    text-decoration: none;
+    transition: .3s;
+}
+
+.acesso__cards2 .acesso_cardspersonagem a img:hover{
+    transform: translateY(.5rem);
+}
+
+.acesso__subtitulo{
+    font-size: var(--h3-font-size);
+    text-transform: uppercase;
+    margin-top: var(--mb-0-5);
+}
 
 .footer{
     border-top: 1px solid #e5e9f2;
