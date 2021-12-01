@@ -48,7 +48,7 @@
     <main class="main">
         <section class="paginainicial container" id="sobre">
             <div class="swiper home-swiper">
-                <div class="swiper-wrapper">
+                <!-- <div class="swiper-wrapper"> -->
                     <section class="swiper-slide">
                         <div class="paginainicial__content grid">
                             <div class="paginainicial__group">
@@ -83,8 +83,6 @@
                                     relançado em 28 de julho.</p>
                                 <div class="paginainicial__buttons">
                                     <a href="login.html" class="button">Veja mais!</a>
-                                    <span class="button--link button--flex"><i
-                                        class='bx bx-left-arrow-alt button__icon'></i>Arraste para esquerda</span>
                                 </div>
                             </div>
                         </div>
@@ -103,19 +101,21 @@
                             </div>
                             <div class="paginainicial__data">
                                 <h3 class="paginainicial_subtitulo">Quer saber todas as histórias de nossos personagens? Torne-se um Chaser!</h3>
-                                <h1 class="paginainicial__titulo">Juntos somos no total de <span id="qtd_contas"></span></h1>
+                                <h1 class="paginainicial__titulo">Juntos somos no total de <span id="span_qtdcontas"></span>!</h1>
+                                
                                 <div class="paginainicial__arrowabaixo">
                                     <i class='bx bx-down-arrow-alt'></i>
                                 </div>
                                 
-                                <div class="paginainicial__buttons">
-                                    <a href="login.html" class="button">Veja mais!</a>
+                                <div class="paginainicial__buttons2">
+                                    <a href="cadastro.html" class="button">Registre-se já!</a>
                                 </div>
                             </div>
                         </div>
                     </section>
-                </div>
-
+                <!-- </div> -->
+                
+                
                 <div class="swiper-pagination"></div>
             </div>
         </section>
@@ -311,14 +311,15 @@
             <p>© 2021 The Best Chasers - Todos os direitos reservados</p>
         </div>
     </main>
-    <script src="assets/js/scrollreveal.min.js"></script>
-    <script src="assets/js/swiper-bundle.min.js"></script>
-    <script src="assets/js/comandosCSS.js"></script>
 </body>
 
 </html>
+<script src="assets/js/scrollreveal.min.js"></script>
+<script src="assets/js/swiper-bundle.min.js"></script>
+<script src="assets/js/comandosCSS.js"></script>
 <script>
-    fetch("/usuario/contarChasers")
-      .then(res => res.json())
-      .then(res => {qtd_contas.innerHTML = res[0].quantidadechasers});
+    fetch("/usuarios/contarChasers")
+        .then(res => res.json())
+           .then(res => {document.getElementById("span_qtdcontas").innerHTML = res[0].quantidade;
+           });
 </script>

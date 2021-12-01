@@ -77,6 +77,13 @@ body{
     background: var(--body-cor);
     color: var(--texto-cor);
 }
+.body__acesso{
+    margin: var(--header-height) 0 0 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background: var(--body-cor);
+    color: var(--texto-cor);
+}
 
 .body__login{
     margin: 0;
@@ -358,6 +365,11 @@ margin-right: var(--mb-1-5);
 .paginainicial__buttons{
     display: flex;
     justify-content: space-between;
+}
+
+.paginainicial__buttons2{
+    display: flex;
+    justify-content: center;
 }
 
 .paginainicial__buttons span{
