@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <link rel="stylesheet" href="css/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="assets/img/logo_gc.png" type="image/x-icon">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+        <link rel="stylesheet" href="css/swiper-bundle.min.css"/>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" href="assets/img/logo_gc.png" type="image/x-icon">
+        <script src="assets/js/sweetalert.js"></script>
+        <script src="assets/js/alertas.js"></script>
     <title>The Best Chasers</title>
 </head>
 
-<body class="body__acesso">
+<body class="body__acesso" onload="validarSessao()">
     <header class="header" id="header">
         <nav class="nav container">
             <a href="#" class="nav__logo">
@@ -25,12 +27,12 @@
                         <a href="#paginainicial" class="nav__link">Olá, <span id="nome_user"></span></a>
                     </li>
                     <li class="nav__item">
-                        <a href="#sobre" class="nav__link">Sobre</a>
+                        <a href="acesso.html" class="nav__link">Personagens</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#personagens" class="nav__link">Personagens</a>
+                        <a href="comentarios.html" class="nav__link">Comentários</a>
                     </li>
-                    <a href="index.html" class="button button--ghost">Sair</a>
+                    <a href="index.html" class="button button--ghost" onload="limparSessao()">Sair</a>
                 </ul>
 
                 <div class="nav__close" id="nav-close">
@@ -166,5 +168,17 @@
 <script src="assets/js/swiper-bundle.min.js"></script>
 <script src="assets/js/comandosCSS.js"></script>
 <script>
+       const srr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2500,
+    delay: 300
+});
+
+srr.reveal('.paginainicial__data')
+srr.reveal('.acesso__cards', {interval: 300})
+srr.reveal('.acesso__cards', {origin: 'left'})
+srr.reveal('.acesso__cards2', {interval: 400})
+srr.reveal('.acesso__cards2', {origin: 'right'})
     nome_user.innerHTML = sessionStorage.NOME_USUARIO;
 </script>

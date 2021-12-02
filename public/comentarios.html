@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="assets/img/logo_gc.png" type="image/x-icon">
+    <script src="assets/js/sweetalert.js"></script>
+    <script src="assets/js/alertas.js"></script>
+    <title>The Best Chasers</title>
+</head>
+
+<body class="body__acesso" onload="validarSessao(), atualizarFeed()">
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <img src="assets/img/Site-logo.png" alt="" class="nav__logo-img">
+                The Best Chasers
+            </a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#paginainicial" class="nav__link">Olá, <span id="nome_user"></span></a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="acesso.html" class="nav__link">Personagens</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="comentarios.html" class="nav__link">Comentários</a>
+                    </li>
+                    <a href="index.html" class="button button--ghost" onload="limparSessao()">Sair</a>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="bx bx-x"></i>
+                </div>
+
+                <img src="assets/img/nav-dio.png" alt="" class="nav__img">
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="bx bx-grid-alt"></i>
+            </div>
+        </nav>
+    </header>
+    <div class="avisos">
+        <div class="container">
+            <h1>Publicar um comentário</h1>
+            <div class="div-form">
+                <form id="form_postagem" method="post" onsubmit="return publicar()">
+                    <span>Título:</span>
+                    <br>
+                    <input name="titulo" id="titulo" maxlength="100" type="text">
+                    <br>
+                    <span>Descrição (máximo de 250 caracteres):</span>
+                    <br>
+                    <textarea name="descricao" id="textarea_descricao" maxlength="250" rows="5"></textarea>
+                    <br>
+                    <button>Enviar</button>
+                </form>
+            </div>
+            <h1>Comentários</h1>
+            <div class="div-results">
+                <div id="feed_container" class="feed-container">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<!-- <script src="assets/js/alertas.js"></script> -->
+<script src="assets/js/scrollreveal.min.js"></script>
+<script src="assets/js/swiper-bundle.min.js"></script>
+<script src="assets/js/comandosCSS.js"></script>
+<script>
+
+const srr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2500,
+    delay: 300
+});
+
+srr.reveal('.avisos .container')
+
+     nome_user.innerHTML = sessionStorage.NOME_USUARIO;
+
+    function limparFormulario() {
+        document.getElementById("form_postagem").reset();
+    }
+
+    function publicar() {
+        var idUsuario = sessionStorage.ID_USUARIO;
+
+        var corpo = {
+            titulo: form_postagem.titulo.value,
+            descricao: form_postagem.descricao.value
+        }
+
+        var formulario = new URLSearchParams(new FormData(document.getElementById("form_postagem")));
+
+        var titulo = formulario.get("titulo");
+        var textarea = formulario.get("descricao");
+
+        if (titulo == "" || textarea == "") {
+            window.alertaError("error","Tente novamente!","Por favor, insira algum conteúdo nos 2 campos!")
+            // alertaError("error","Tente novamente!","Por favor, insira algum conteúdo nos 2 campos!");
+            
+            return false;
+        }
+        
+        fetch(`/avisos/publicar/${idUsuario}`, {
+            method: "post",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(corpo)
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                window.alertaSuccess("success","Parabéns","Post realizado com sucesso pelo usuario de ID: "+idUsuario+"!");
+                setTimeout(function(){
+                    window.location = "comentarios.html";
+                    limparFormulario();
+                }, 1600);
+                
+            } else {
+                throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: "+resposta.status);
+            }
+        }).catch(function (erro) {
+            console.log(`#ERRO: ${erro}`);
+            
+        });
+
+        return false;
+
+    }
+
+    function atualizarFeed() {
+
+        fetch("/avisos/listar").then(function (resposta) {
+            if (resposta.ok) {
+                if (resposta.status == 204) {
+                    var feed = document.getElementById("feed_container");
+                    var mensagem = document.createElement("span");
+                    mensagem.innerHTML = "Nenhum resultado encontrado."
+                    feed.appendChild(mensagem);
+                    throw "Nenhum resultado encontrado!!";
+                }
+
+                resposta.json().then(function (resposta) {
+                    console.log("Dados recebidos: ", JSON.stringify(resposta));
+
+                    var feed = document.getElementById("feed_container");
+                    feed.innerHTML = "";
+                    for (var i = 0; i < resposta.length; i++) {
+                        var publicacao = resposta[i];
+
+                        // criando e manipulando elementos do HTML via JavaScript
+                        var divPublicacao = document.createElement("div");
+                        var spanID = document.createElement("span");
+                        var spanTitulo = document.createElement("span");
+                        var spanNome = document.createElement("span");
+                        var divDescricao = document.createElement("div");
+                        var divButtons = document.createElement("div");
+
+                        spanID.innerHTML = "Comentário: <b>" + publicacao.idAviso + "</b>";
+                        spanTitulo.innerHTML = "Título: <b>"+publicacao.titulo+"</b>";
+                        spanNome.innerHTML = "Autor: <b>"+publicacao.nome+"</b>";
+                        divDescricao.innerHTML = "Descrição: <b>"+publicacao.descricao+"</b>";
+
+                        divPublicacao.className = "publicacao";
+                        spanTitulo.id = "inputNumero"+publicacao.idAviso;
+                        spanNome.className = "publicacao-nome";
+                        spanTitulo.className = "publicacao-titulo";
+                        divDescricao.className = "publicacao-descricao";
+
+                        divButtons.className = "div-buttons"
+
+                        divPublicacao.appendChild(spanID);
+                        divPublicacao.appendChild(spanNome);
+                        divPublicacao.appendChild(spanTitulo);
+                        divPublicacao.appendChild(divDescricao);
+                        divPublicacao.appendChild(divButtons);
+                        feed.appendChild(divPublicacao);
+                    }
+
+                    
+                });
+            } else {
+                throw('Houve um erro na API!');
+            }
+        }).catch(function(resposta) {
+            console.error(resposta);
+            
+        });
+    }
+
+    function testar() {
+        aguardar();
+
+        var formulario = new URLSearchParams(new FormData(document.getElementById("form_postagem")));
+
+        var divResultado = document.getElementById("div_feed");
+
+        divResultado.appendChild(document.createTextNode(formulario.get("descricao"))); 
+        divResultado.innerHTML = formulario.get("descricao");
+
+        finalizarAguardar();
+
+        return false;
+    }
+</script>

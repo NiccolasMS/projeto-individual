@@ -727,6 +727,69 @@ margin-right: var(--mb-1-5);
     margin-top: var(--mb-0-5);
 }
 
+.avisos {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: var(--mb-2-5);
+}
+
+#form_postagem span{
+    font-weight: var(--font-semi-bold);
+}
+
+.div-form input{
+    box-shadow: 0 5px 10px rgba(31,43,58,.40);
+    border: 1px solid #dbdfea;
+    border-radius: 8px;
+    width: 600px;
+    padding: 8px;
+    font-size: 15px;
+    height: 40px;
+    margin-bottom: var(--mb-1);
+}
+
+.div-form textarea{
+    box-shadow: 0 5px 10px rgba(31,43,58,.40);
+    border: 1px solid #dbdfea;
+    border-radius: 8px;
+    width: 600px;
+    padding: 8px;
+    font-size: 15px;
+    margin-bottom: var(--mb-1);
+}
+
+.div-form button{
+    display: inline-block;
+    background-color: var(--primeira-cor);
+    color: var(--titulo-cor);
+    padding: 1rem 1.75rem;
+    border-radius: .5rem;
+    font-weight: var(--font-medium);
+    transition: .3s;
+}
+
+.div-form button:hover{
+    background-color: var(--primeira-cor-alt);
+}
+
+.publicacao {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid #e5e9f2;
+    border-radius: 8px;
+    margin-bottom: var(--mb-0-5);
+}
+
 .footer{
     border-top: 1px solid #e5e9f2;
     height: 10vh;

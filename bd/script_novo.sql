@@ -16,6 +16,15 @@ idPersonagem INT PRIMARY KEY AUTO_INCREMENT,
 nome varchar(45)
 );
 
+CREATE TABLE aviso (
+id INT PRIMARY KEY AUTO_INCREMENT,
+titulo varchar (100),
+descricao varchar(150),
+fk_usuario int,
+foreign key (fk_usuario) references usuario(id)
+);
+
+
 INSERT INTO personagens (nome) values
 ('Elesis'),
 ('Lire'),
@@ -41,3 +50,7 @@ INSERT INTO personagens (nome) values
 SELECT * from personagens;
 
 SELECT * from usuario;
+
+SELECT * from aviso;
+
+truncate table aviso;
