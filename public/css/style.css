@@ -790,6 +790,20 @@ margin-right: var(--mb-1-5);
     margin-bottom: var(--mb-0-5);
 }
 
+.char__titulo{
+    margin-top: 150px;
+}
+
+.char__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.char__info img{
+    height: 400px;
+}
+
 .footer{
     border-top: 1px solid #e5e9f2;
     height: 10vh;
