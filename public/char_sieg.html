@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="assets/img/logo_gc.png" type="image/x-icon">
+    <script src="assets/js/sweetalert.js"></script>
+    <script src="assets/js/alertas.js"></script>
+    <title>The Best Chasers</title>
+</head>
+
+<body class="body__acesso" onload="validarSessao()">
+    
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <img src="assets/img/Site-logo.png" alt="" class="nav__logo-img">
+                The Best Chasers
+            </a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#paginainicial" class="nav__link">Olá, <span id="nome_user"></span></a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="acesso.html" class="nav__link">Personagens</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="comentarios.html" class="nav__link">Comentários</a>
+                    </li>
+                    <a href="index.html" class="button button--ghost" onload="limparSessao()">Sair</a>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="bx bx-x"></i>
+                </div>
+
+                <img src="assets/img/nav-dio.png" alt="" class="nav__img">
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="bx bx-grid-alt"></i>
+            </div>
+        </nav>
+    </header>
+
+    <h1 class="char__titulo">Sieghart</h2>
+
+        <div class="char__container container">
+            <div class="char__info">
+                <div>
+                    <h2 class="char__subtitulo">Informações Principais do Personagem</h2>
+                    <br>
+                    Nome: Ercnard Sieghart
+                    <br>
+                    Idade: Mais de 600 anos
+                    <br>
+                    Origem: Canaban
+                </div>
+                <img src="assets/img/sieg.png" alt="">
+            </div>
+            <div class="char__info">
+                <img src="assets/img/classes/sieg/sieg_info.png" alt="">
+                <div>
+                    <span> Há quase 6 séculos Sieghart já era conhecido como um desastre natural por todo reino de
+                        Canaban. Seus feitos heróicos foram ganhando tamanha proporção que sua história foi adquirindo
+                        caráter lendário.
+                        <br><br>
+                        Diziam que ele era capaz de devastar montanhas e arrasar civilizações inteiras em um piscar de
+                        olhos, tudo isso graças à sua velocidade e a sua indiscutível força. Mas tamanho talento era
+                        usado pelo bem de seu povo, e lhe garantiu diversos títulos: desde “o gênio da espada” até “o
+                        maior herói de Vermécia”.
+                    </span>
+                </div>
+            </div>
+            <div class="char__info">
+                <div>
+                    <span>
+                        Com tamanha habilidade e coragem, Sieghart sempre defendeu seu reino de todos os monstros e
+                        ameaças, mas sempre apareciam mais e mais. Dizem que sua habilidade também o tornou meio
+                        arrogante e superconfiante. Isso o levou a procurar pela fonte de todo o mal em Vermécia, para
+                        destruí-la de uma vez por todas.
+                        <br><br>
+                        Algum tempo após a partida de Sieghart, a notícia de que ele se sacrificou para aprisionar a
+                        Rainha das Trevas chegou ao reino de Canaban. O grande herói nunca mais foi visto... Até ser
+                        recentemente encontrado pelo grupo da Grand Chase como se ainda fosse um jovem guerreiro!
+                    </span>
+                </div>
+                <img src="assets/img/classes/sieg/sieg_info2.png" alt="">
+            </div>
+            <br><br>
+            <h2 class="char__subtitulo">Classes</h2>
+            <br>
+            <div class="char__info">
+                <div>
+                    <img src="assets/img/classes/sieg/gladiador.png" alt=""><br>
+                    <h3 class="char__descricaoclasse">Gladiador</h3>
+                    <h4 class="char__descricaoclasse">Arma: Lâmina</h4>
+                </div>
+                <div>
+                    <img src="assets/img/classes/sieg/comandante.png" alt="">
+                    <h3 class="char__descricaoclasse">Comandante</h3>
+                    <h4 class="char__descricaoclasse">Arma: Lança e Espada</h4>
+                </div>
+                <div>
+                    <img src="assets/img/classes/sieg/general.png" alt="">
+                    <h3 class="char__descricaoclasse">General</h3>
+                    <h4 class="char__descricaoclasse">Arma: Espadas</h4>
+                </div>
+                <div>
+                    <img src="assets/img/classes/sieg/avatar.png" alt="">
+                    <h3 class="char__descricaoclasse">Avatar</h3>
+                    <h4 class="char__descricaoclasse">Arma: Soluna</h4>
+                </div>
+            </div>
+            <br><br><br>
+            <h2 class="char__subtitulo">Habilidade especial</h2>
+            <br><br>
+            <div class="char__info">
+                <div>
+                    <h2 class="char__subtitulo">Fúria</h2>
+                    <span>
+                        A Fúria do Sieghart é parecida com a do Jin. Ambas requerem carregamento e podem ser ativadas
+                        para temporariamente dar ao personagem propriedades especiais. Porém, o método de carregamento e
+                        os bônus dados são diferentes.
+                        <br><br>
+                        Enquanto não estiver no Modo Fúria, a Barra de Fúria do Sieghart irá encher sozinha (45 segundos
+                        para o Avatar, 30 segundos para o resto), ao atacar (Missão) ou ao ser atacado. Porém, usar
+                        habilidades pode pausar a barra durante a habilidade.
+                        <br><br>
+                        Quando a barra de Fúria estiver carregada até por volta da marcação de duas barras de MP cheias
+                        no mínimo, o comando X.PNG pode ativar o seu Modo Fúria, o envolvendo em uma aura escura.
+                        Enquanto estiver neste estado, Sieghart ganha super armadura, aumento de velocidade, e aumento
+                        no dano (x1.1), alteração na defesa (aumenta o dano sofrido para o Avatar, reduz o dano sofrido
+                        para o resto) e alteração na animação das habilidades. Além disso, a barra de Fúria
+                        continuamente diminui, mas usar habilidades irá temporariamente pausar a drenagem. Quando
+                        completamente carregado, o Modo Fúria dura aproximadamente 5.6 segundos, enquanto para o Avatar
+                        ele dura 10 segundos.
+                        <br><br>
+                        Na animação, o Gladiador e o Comandante tem que se curvar para pegar a "fúria", enquanto o
+                        General e o Avatar só a ativam. Além disso, a do Avatar causa um efeito de onda de impacto nos
+                        inimigos próximos. o Sieghart fica invencível durante a animação, mas a Barra de fúria
+                        continuará a diminuir.
+                        <br><br>
+                        Somente o General, o Avatar e a Árvore de Talentos do Gladiador ganham movimentos que consomem
+                        Fúria, e somente o Avatar possui um movimento que consome Fúria até mesmo no modo Fúria.
+                    </span>
+                </div>
+                <img src="assets/img/classes/sieg/furia.png" style="height: 40px; margin-left: 20px;">
+            </div>
+            <br><br>
+        </div>
+        <script src="assets/js/scrollreveal.min.js"></script>
+        <script src="assets/js/comandosCSS.js"></script>
+</body>
+
+</html>
+<script>
+    const srr = ScrollReveal({
+        origin: 'top',
+        distance: '60px',
+        duration: 2500,
+        delay: 300
+    });
+
+    srr.reveal('.char__container')
+    srr.reveal('.char__container .char__info', { interval: 300 })
+</script>

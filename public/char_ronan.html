@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="assets/img/logo_gc.png" type="image/x-icon">
+    <script src="assets/js/sweetalert.js"></script>
+    <script src="assets/js/alertas.js"></script>
+    <title>The Best Chasers</title>
+</head>
+
+<body class="body__acesso" onload="validarSessao()">
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <img src="assets/img/Site-logo.png" alt="" class="nav__logo-img">
+                The Best Chasers
+            </a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#paginainicial" class="nav__link">Olá, <span id="nome_user"></span></a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="acesso.html" class="nav__link">Personagens</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="comentarios.html" class="nav__link">Comentários</a>
+                    </li>
+                    <a href="index.html" class="button button--ghost" onload="limparSessao()">Sair</a>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="bx bx-x"></i>
+                </div>
+
+                <img src="assets/img/nav-dio.png" alt="" class="nav__img">
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="bx bx-grid-alt"></i>
+            </div>
+        </nav>
+    </header>
+
+    <h1 class="char__titulo">Ronan</h2>
+
+        <div class="char__container container">
+            <div class="char__info">
+                <div>
+                    <h2 class="char__subtitulo">Informações Principais do Personagem</h2>
+                    <br>
+                    Nome: Ronan Erudon
+                    <br>
+                    Idade: 19 anos
+                    <br>
+                    Origem: Canaban
+                </div>
+                <img src="assets/img/ronan.png" alt="">
+            </div>
+            <div class="char__info">
+                <img src="assets/img/classes/ronan/ronan_info.png" alt="">
+                <div>
+                    <span> Ronan é descendente dos Erudon, lendária família de espadachins-arcanos de Canaban. Por este
+                        prestígio, exercia a função de guarda real, posto que ocupou até o traiçoeiro ataque de Cazeaje.
+                        <br><br>
+                        Um jovem justo, valente e de coração puro, ele resistiu à tentativa da Rainha das Trevas de
+                        dominar o seu corpo, e experimentando em primeira mão a força do seu mal, decidiu encarar como
+                        sua missão derrotá-la para restaurar a paz em seu reino. Por dividirem o mesmo objetivo, ele
+                        juntou forças com a Grand Chase enquanto buscavam pelo paradeiro de Cazeaje.
+                    </span>
+                </div>
+            </div>
+            <br><br>
+            <h2 class="char__subtitulo">Classes</h2>
+            <br>
+            <div class="char__info">
+                <div>
+                    <img src="assets/img/classes/ronan/arcano.png" style="margin-left: 30px;"><br>
+                    <h3 class="char__descricaoclasse">Arcano</h3>
+                    <h4 class="char__descricaoclasse">Arma: Gládio</h4>
+                </div>
+                <div>
+                    <img src="assets/img/classes/ronan/draconiano.png" style="margin-left: 30px;">
+                    <h3 class="char__descricaoclasse">Draconiano</h3>
+                    <h4 class="char__descricaoclasse">Arma: Glaive</h4>
+                </div>
+                <div>
+                    <img src="assets/img/classes/ronan/defensor.png" style="margin-left: 30px;">
+                    <h3 class="char__descricaoclasse">Defensor</h3>
+                    <h4 class="char__descricaoclasse">Arma: Égide</h4>
+                </div>
+                <div>
+                    <img src="assets/img/classes/ronan/inquisidor.png" style="margin-left: 30px;">
+                    <h3 class="char__descricaoclasse">Inquisidor</h3>
+                    <h4 class="char__descricaoclasse">Arma: Tirfing</h4>
+                </div>
+            </div>
+            <br><br><br>
+        </div>
+        <script src="assets/js/scrollreveal.min.js"></script>
+        <script src="assets/js/comandosCSS.js"></script>
+</body>
+
+</html>
+<script>
+    const srr = ScrollReveal({
+        origin: 'top',
+        distance: '60px',
+        duration: 2500,
+        delay: 300
+    });
+
+    srr.reveal('.char__container')
+    srr.reveal('.char__container .char__info', { interval: 300 })
+</script>

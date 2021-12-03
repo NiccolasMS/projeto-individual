@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="assets/img/logo_gc.png" type="image/x-icon">
+    <script src="assets/js/sweetalert.js"></script>
+    <script src="assets/js/alertas.js"></script>
+    <title>The Best Chasers</title>
+</head>
+
+<body class="body__acesso" onload="validarSessao()">
+    
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <img src="assets/img/Site-logo.png" alt="" class="nav__logo-img">
+                The Best Chasers
+            </a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#paginainicial" class="nav__link">Olá, <span id="nome_user"></span></a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="acesso.html" class="nav__link">Personagens</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="comentarios.html" class="nav__link">Comentários</a>
+                    </li>
+                    <a href="index.html" class="button button--ghost" onload="limparSessao()">Sair</a>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="bx bx-x"></i>
+                </div>
+
+                <img src="assets/img/nav-dio.png" alt="" class="nav__img">
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="bx bx-grid-alt"></i>
+            </div>
+        </nav>
+    </header>
+
+    <h1 class="char__titulo">Mari</h2>
+
+        <div class="char__container container">
+            <div class="char__info">
+                <div>
+                    <h2 class="char__subtitulo">Informações Principais do Personagem</h2>
+                    <br>
+                    Nome: Mari Ming Onette
+                    <br>
+                    Idade: Desconhecida
+                    <br>
+                    Origem: Calnat
+                </div>
+                <img src="assets/img/mari.png" alt="">
+            </div>
+            <div class="char__info">
+                <img src="assets/img/classes/mari/mari_info.png" alt="">
+                <div>
+                    <span> Mari ainda é um dos grandes mistérios da Grand Chase. Encontrada pelo grupo a caminho do
+                        Altar da Destruição, Mari não possuía nenhum traço de sua memória. De semblante apático e
+                        inexpressivo, e olhos heterocromáticos que não deixam transparecer quase nenhuma emoção, talvez
+                        o fato de não se lembrar de absolutamente nada é que alimente a maior motivação da garota: a
+                        busca pelo conhecimento.
+                        <br><br>
+                        Sempre com um livro a tira colo, Mari procura analisar tudo de forma fria e científica para
+                        tentar compreender o mundo ao seu redor e demonstra uma grande devoção pela pesquisa. O que é
+                        inegável ao seu respeito é sua capacidade de mesclar tecnologia avançada e magia, traços
+                        característicos do antigo e extinto povo de Calnat, o maior reino tecnológico que já existiu no
+                        passado, antes de desaparecer misteriosamente em uma gigantesca explosão.
+                        <br><br>
+                        Ao que tudo indica, a menina é a última sobrevivente de Calnat, mas seu passado ainda guarda
+                        muitos mistérios.
+                    </span>
+                </div>
+            </div>
+            <div class="char__info">
+                <div>
+                    <h2 class="char__subtitulo">Personalidade</h2>
+                    <span>
+                        Mari não é capaz de revelar seus pensamentos para as pessoas ao seu redor já que ela ficou
+                        sozinha por tanto tempo. Mas para aqueles por quem ela estiver interessada ou aqueles que ela
+                        gostar, ela indiretamente mostra seus sentimentos agindo discretamente e sendo gentil. Ela
+                        normalmente não fala muito e parece que ela está presa em seus pensamentos, mas ela conversa
+                        quando se trata de uma coisa que ela gosta. Quando ela gosta de algo, ela não consegue se livrar
+                        disso por um bom tempo.
+                    </span>
+                </div>
+                <img src="assets/img/classes/mari/mari_info2.png" alt="">
+            </div>
+            <br><br>
+            <h2 class="char__subtitulo">Classes</h2>
+            <br>
+            <div class="char__info">
+                <div>
+                    <img src="assets/img/classes/mari/tecnomaga.png" alt=""><br>
+                    <h3 class="char__descricaoclasse">Tecnomaga</h3>
+                    <h4 class="char__descricaoclasse">Arma: Manual</h4>
+                </div>
+                <div>
+                    <img src="assets/img/classes/mari/duelista.png" alt="">
+                    <h3 class="char__descricaoclasse">Duelista</h3>
+                    <h4 class="char__descricaoclasse">Arma: Revólver</h4>
+                </div>
+                <div>
+                    <img src="assets/img/classes/mari/polaris.png" alt="">
+                    <h3 class="char__descricaoclasse">Polaris</h3>
+                    <h4 class="char__descricaoclasse">Arma: Marreta</h4>
+                </div>
+                <div>
+                    <img src="assets/img/classes/mari/lageas.png" alt="">
+                    <h3 class="char__descricaoclasse">La Geas</h3>
+                    <h4 class="char__descricaoclasse">Arma: WDW</h4>
+                </div>
+            </div>
+            <br><br><br>
+            <h2 class="char__subtitulo">Habilidade especial</h2>
+            <br><br>
+            <div class="char__info">
+                <div>
+                    <h2 class="char__subtitulo">Corrida no ar</h2>
+                    <span>
+                        A Corrida no Ar é uma das maiores ferramentas da Mari. Ela projeta as mãos em baixo do seu lado,
+                        usando seus poderes para faze-la planar pelos ares. O comando é Seta Direita Seta Direita+ Seta
+                        Cima, apesar dela atirá-la exatamente no momento em que a sua Corrida simples termina.
+                        <br>
+                        Aparentemente a Corrida no Ar é um dos pulos mais altos usados; ele simplesmente supera o Salto
+                        da Caçadora, e até o Pulo Duplo executado pelas classes da Amy, o Ninja, a Arqueira, e a Nova.
+                        <br>
+                        Além disso com o KORMET da Polaris, ela pode usar uma propulsão horizontal depois da Corrida no
+                        Ar.
+                        <br>
+                        <b>Trivialidade:</b> Pode-se notar que, os seus poderes parecem sair do seu traseiro. Porém, se
+                        você
+                        olhar mais de perto, a sua mão está perto do seu lado executando o poder.
+                    </span>
+                </div>
+                <img src="assets/img/classes/mari/mari_habilidades.png" style="height: 200px; margin-left: 20px;">
+            </div>
+            <br><br>
+            <div class="char__info">
+                <img src="assets/img/classes/mari/escudomana.png" style="height: 200px; margin-right: 20px;">
+                <div>
+                    <h2 class="char__subtitulo">Escudo de Mana</h2>
+                    <span>
+                        Um escudo é criado que substitua Mana por Vida.¹ Em outras palavras, quando atacado todo o dano
+                        infligido é subtraido da barra de MP enquanto a Mari tiver MP guardado. Se o dano exceder a
+                        quantidade de MP guardado, o excesso de dano será subtraido da Vida (HP). Ele pode ser uma
+                        habilidade útil, por ela proteger de danos prejudiciais. Todos duram 10 segundos, mas não
+                        precisam de carregamento.
+                        O comando é XX+Seta Cima. <br><br>
+                        O Escudo de Mana protege o usuário dos seguintes tipos de dano: <br><br>
+                        Envenenar ²<br>
+                        Amaldiçoar ²<br>
+                        Onda de Impacto <br>
+                        Congelar ²<br>
+                        Petrificar ²<br>
+                        Ataques a distância <br>
+                        Nuvens Tóxicas ²<br>
+                        Bolas de Fogo e efeitos de fogo ²<br>
+                        Derrubar <br>
+                        Ataques de baforadas <br>
+                        Choque ou eletrocutar <br>
+                        Afogamento <br>
+                        Combinações/Aplicação de ataques <br>
+                        Habilidades de MP usadas por outros jogadores <br><br>
+                        Notas: <br>
+                        1. Ironicamante, o Escudo de Mana não usa nenhuma Mana (MP) quando ativado, apesar da
+                        intensidade em que ele é usado. Porém, mesmo que ele não use MP para ser ativado, jogadores só
+                        precisam de uma pequena quantidade de MP guardado para que o Escudo tenha efeito. Por exemplo,
+                        mesmo se você tiver 1 barra de MP, o Escudo poderá ser ativado e te proteger só por esta 1
+                        barra. Se você tiver 3 barras guardadas, o escudo te protegerá por todas as 3 barras, e assim
+                        vai. <br><br>
+                        2. Mesmo que você esteja inicialmente protegido de envenenar, amaldiçoar, ser congelado,
+                        queimado, ou petrificado, seus efeitos podem durar até o fim da duração do Escudo de Mana.
+                        Qualquer tipo de dano continuará drenando a Mana (MP) até que a barra de MP estiver vazia;
+                        quando isto acontecer ele começará a drenar a Vida (HP). Se você ainda tiver o efeito do Escudo
+                        de Mana quando você sair de um Congelar ou de um Petrificar, o Escudo de Mana ainda absorverá o
+                        dano. Assim, é útil ativar o Escudo só antes que você seja afetado por estes efeitos ou quando
+                        você souber que você entrará em contato com eles.
+                    </span>
+                </div>
+            </div>
+            <br><br>
+            <div class="char__info">
+                <div>
+                    <h2 class="char__subtitulo">Caixas Maquinárias</h2>
+                    <span>
+                        Uma caixa contendo uma ferramenta especial é fornecida. Pode ser notado que a caixa tem um
+                        número nela, indicando o nível da maquinaria. Porém, todas as caixas contém objetos diferentes,
+                        então não existe um nível de "potência". <br><br>
+                        O comando é XX+C+Z. Note que o C representa o numero pressionado. Porém, se
+                        o jogador não apertar a tecla de Ataque Z imediatamente para criar a ferramenta especial, as
+                        caixas explodirão imediatamente depois de agirem como minas. É interessante notar que as caixas
+                        terão a palavra "Sector (Setor)" nelas seguida pelo "Lv. (Nv.)" e um "número".
+                        <br><br>
+                        Itens agem idênticos à Coluna de Pedra do Druida e à Boneca da Maga; eles servem tanto como um
+                        obstáculo quanto como um objeto destrutivo.
+                        <br><br>
+                        Como Duelista e Polaris, as caixas podem ser invocadas mais rapidamente. Como Polaris, existe
+                        uma caixa nível 3. A La Geas não possui nenhuma caixa que pode ser invocada. <br><br>
+                        Caixas Maquinárias invocadas:
+                    </span>
+                </div>
+                <img src="assets/img/classes/mari/caixa1.png" style="height: 200px;">
+                <img src="assets/img/classes/mari/caixa2.png" style="height: 200px;">
+                <img src="assets/img/classes/mari/caixa3.png" style="height: 200px;">
+            </div>
+            <br>
+            <div class="char__info">
+                <div>
+                    <span>
+                        Tecnomaga <br><br>
+                        Nível 1 - Um canhão azul que atira uma bola de canhão horizontalmente por uma distância curta.
+                        Atira seis vezes. <br>
+                        Nível 2 - Um canhão vermelho que atira uma bola de canhão para cima em um baixo arco por uma
+                        curta distância. Atira seis vezes causando um efeito de fogo no chão. <br> <br>
+                        Duelista <br><br>
+                        Nível 1 - Um "Empurrão" que joga os inimigos longe causando uma pequena quantidade de dano. Ele
+                        funciona como uma grande mina de proximidade sem efeito de explosão. Ele dura 8 segundos se não
+                        for ativado e desaparece quando entra em contato com um inimigo. <br>
+                        Nível 2 - O Míssil Triplo é um canhão que só lança dois mísseis para cima em uma altura media.
+                        Cada míssil, porém, explode no ar para liberar três ogivas que atingem o chão na mesma área. Ele
+                        tem um alcance mais longo que os canhões da Tecnomaga. Ele funciona como um Míssil balístico
+                        intercontinental que lança ogivas nucleares individuais. <br>
+                        Nota: O míssil maior atirado do canhão só irá atravessar o inimigo, não tendo nenhum efeito. Ele
+                        é usado melhor em alvos de longo alcance. <br><br>
+                        Polaris <br><br>
+                        Nível 1 - O Gerador de Mana é um dispositivo com duas antenas que aumenta a velocidade da
+                        regeneração de MP quando os membros do grupo estiverem por perto. <br>
+                        Nota: Durante o PvP o mesmo drena o MP dos adversários, anula o dano de quem estiver na área de
+                        alcance, prende os adversários nas ondas de energia, e serve de barreira. <br>
+                        Nível 2 - Um canhão vermelho que mistura das caixas de Nível 2 da Tecnomaga e o da Duelista, mas
+                        ele atira três bolas de canhão duas vezes em uma curta distância, causa um efeito de fogo no
+                        chão onde elas caem. <br>
+                        Nível 3 - Portais que permitem ao grupo se teleportar de um lugar para outro na fase. O jogador
+                        tem que construir dois deles em lugares diferentes para eles funcionarem- um como o ponto de
+                        início e o outro como uma saída. Invocar um terceiro portal apagará o primeiro feito. Note que
+                        eles ficarão no chão para sempre. por outro lado, cada portal custa cerca da metade da sua barra
+                        de MP.
+                    </span>
+                </div>
+            </div>
+            <br><br>
+            <div class="char__info">
+                <img src="assets/img/classes/mari/particulas.png" style="height: 200px; margin-right: 20px;">
+                <div>
+                    <h2 class="char__subtitulo">Partículas</h2>
+                    <span>
+                        Existem várias Partículas que normalmente amplificam as habilidades comuns da Mari. Normalmente
+                        elas agem como um projétil através do comando C ou do Crítico/Duplo, dependendo da classe.
+                        As vezes elas agem como um buff. As partículas permanecem por um grande período de tempo,
+                        atingindo de 12-20 segundos, dependendo da partícula. <br>
+                        O comando de criação é XX+X+Z, e cada uma terá uma "marca" durante o tempo de
+                        criação, e demora cerca de 3 segundos para uma aparecer, e atualmente somente três partículas
+                        aparecem significando que o tempo de criação é de 4 segundos no total. Diferentes partículas
+                        podem ser criadas dependendo da classe. <br>
+                        Note que a Mari pode simplesmente correr para cancelar a criação, para simplesmente evitar
+                        qualquer ataque que vier. <br><br>
+
+                        Partículas criadas:
+                    </span>
+                </div>
+                <br><br>
+            </div>
+            <div class="char__info">
+                <div>
+                    <span>
+                        <br>
+                        Tecnomaga <br><br>
+                        Nível 1 - Cria uma Partícula Azul que é atirada ligeiramente para baixo. Criada a qualquer
+                        momento e dura 20 segundos. <br>
+                        Nível 2 - Cria uma Partícula Vermelha que é atirada ligeiramente para cima. Criada na primeira
+                        marca e dura 20 segundos. <br>
+                        Nível 3 - Cria uma Partícula Verde que pode ser atirada exageradamente para baixo enquanto sobe.
+                        Criada na segunda marca ou toda a duração e dura 20 segundos. <br> <br>
+                        Duelista <br><br>
+                        Munição Mágica - Encanta uma unica bala com Gelo, causando um efeito congelar no impacto. Criada
+                        em toda a duração enquanto deixa permanentemente encantada até atirada. <br><br>
+                        Polaris <br><br>
+                        Partícula - Cria uma Partícula Azul, e quando equipada, melhora muito a Regeneração de MP. <br>
+                        Criada em toda a duração (primeira marca) enquanto dura 12 segundos. <br><br>
+                        La Geas <br><br>
+                        Reparar -Cria três pequenas Partículas Azuis, que quando equipadas, amplificam a recuperação de
+                        MP por 12 segundos, porém, quando se é atacado as partículas desaparecem instantaneamente
+                        permitindo que Mari recupere metade da sua barra de MP.
+                    </span>
+                </div>
+                <br><br>
+            </div>
+            <br><br>
+            <div class="char__info">
+                <div>
+                    <h2 class="char__subtitulo">Invocação Maquinária</h2>
+                    <span>
+                        Uma ferramenta que invoca um tipo de maquinaria que é usado para ajudar Mari nas batalhas. Para
+                        cada classe da Mari, as maquinas invocadas ficam mais diferentes. Elas disfarçam o Combo Básico,
+                        Crítico/Duplo, Ataques Aéreos, e Corridas com Ataque. Elas duram 20 segundos, e leva cerca de 5
+                        segundos para construir uma. Não é preciso carregar. <br>
+                        As coordenadas são XX+X+C (Repetidamente). Note que existe uma rara ocasião que
+                        ela falhará aleatoriamente. <br><br>
+
+                        A Tecnomaga e a Duelista invocam uma ferramenta chamada W.D.W.. <br><br>
+
+                        A Polaris constrói um robô em miniatura que pode aumentar de tamanho chamado "KORMET".
+                    </span>
+                </div>
+                <br><br>
+            </div>
+            <br><br>
+            <script src="assets/js/scrollreveal.min.js"></script>
+            <script src="assets/js/comandosCSS.js"></script>
+</body>
+
+</html>
+<script>
+    const srr = ScrollReveal({
+        origin: 'top',
+        distance: '60px',
+        duration: 2500,
+        delay: 300
+    });
+
+    srr.reveal('.char__container')
+    srr.reveal('.char__container .char__info', { interval: 300 })
+</script>

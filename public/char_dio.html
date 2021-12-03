@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="assets/img/logo_gc.png" type="image/x-icon">
+    <script src="assets/js/sweetalert.js"></script>
+    <script src="assets/js/alertas.js"></script>
+    <title>The Best Chasers</title>
+</head>
+
+<body class="body__acesso" onload="validarSessao()">
+    
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <img src="assets/img/Site-logo.png" alt="" class="nav__logo-img">
+                The Best Chasers
+            </a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#paginainicial" class="nav__link">Olá, <span id="nome_user"></span></a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="acesso.html" class="nav__link">Personagens</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="comentarios.html" class="nav__link">Comentários</a>
+                    </li>
+                    <a href="index.html" class="button button--ghost" onload="limparSessao()">Sair</a>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="bx bx-x"></i>
+                </div>
+
+                <img src="assets/img/nav-dio.png" alt="" class="nav__img">
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="bx bx-grid-alt"></i>
+            </div>
+        </nav>
+    </header>
+
+    <h1 class="char__titulo">Dio</h2>
+
+        <div class="char__container container">
+            <div class="char__info">
+                <div>
+                    <h2 class="char__subtitulo">Informações Principais do Personagem</h2>
+                    <br>
+                    Nome: Dio Burning Canyon
+                    <br>
+                    Idade: Sua idade não pode ser calculada com parâmetros humanos. Aparenta ter 18 anos.
+                    <br>
+                    Origem: Elyos
+                    <br>
+                    Gosta: Brincar com sua Soul Reaver (Foice)
+                    <br>
+                    Ponto fraco: Rey
+                </div>
+                <img src="assets/img/dio.png" alt="">
+            </div>
+            <div class="char__info">
+                <img src="assets/img/classes/dio/dio_info.png" alt="">
+                <div>
+                    <span> Dio é um habitante da Dimensão Mágica de Elyos, desconhecida por quase todos os humanos,
+                        dominada por criaturas demoníacas e energias arcanas. Membro da raça conhecida como Asmodiana,
+                        seu povo é dividido entre várias Tribos Demoníacas que disputam o poder.
+                        <br><br>
+                        Seu comportamento pode parecer rude e egoísta, ou até mesmo um pouco selvagem para algumas
+                        pessoas, mas deve se levar em conta que é muito difícil compreendê-lo se usados os valores
+                        humanos como base de comparação, já que a moral e os atos da sua raça são bem diferentes.
+                        <br><br>
+                        Séculos atrás, quando sua dimensão ainda era ligada ao mundo de Ernas através de vários portais,
+                        as Tribos Demoníacas invadiram o mundo dos humanos e travaram uma gigantesca batalha contra o
+                        reino de Calnat, o mais tecnologicamente avançado de sua época. Como resultado dessa guerra, que
+                        ficou conhecida como a 1ª Guerra Mágica, os Asmodianos perderam e viram os portais que ligavam
+                        sua dimensão ao mundo dos mortais serem selados, aprisionando-os definitivamente em sua
+                        dimensão.
+                    </span>
+                </div>
+            </div>
+            <br><br>
+            <div class="char__info">
+                <div>
+                    <span>
+                        Dio fazia parte dos clãs que se opuseram ao ataque do seu povo contra Calnat. Ele havia sido
+                        enviado para Ernas para vigiar como a batalha estava se desenrolando e reportar de volta para
+                        sua família. Infelizmente, foi pouco depois de ele ter entrado em Ernas que as Tribos Demoníacas
+                        sofreram sua derrota e os portais para Elyos foram selados, prendendo o jovem Asmodiano no mundo
+                        dos humanos. Ao mesmo tempo em que os portais foram fechados, Dio viu seus poderes também sendo
+                        selados, e assim não teve forças para voltar para sua dimensão, ficando isolado em companhia de
+                        seu mordomo, Alfred, e seu incômodo criado, Sebastian.
+                        <br><br>
+                        Graças ao seu temperamento arrogante e orgulhoso, enquanto estava preso em Ernas, Dio impôs a si
+                        mesmo a nova missão de vigiar os Portais Dimensionais para garantir que eles continuassem
+                        lacrados. Assim ele planejava impedir que uma nova guerra entre os mundos corresse o risco de
+                        acontecer.
+                        <br><br>
+                        Ele tem uma grande rivalidade com Veigas Terr, já que Dio é o núcleo das famílias moderadas e
+                        Veigas é o núcleo da família agressiva.
+                    </span>
+                </div>
+                <img src="assets/img/classes/dio/dio_info2.png" alt="">
+            </div>
+            <br><br>
+            <h2 class="char__subtitulo">Classes</h2>
+            <br>
+            <div class="char__info">
+                <div>
+                    <img src="assets/img/classes/dio/profano.png" alt=""><br>
+                    <h3 class="char__descricaoclasse">Profano</h3>
+                    <h4 class="char__descricaoclasse">Arma: Deathstar</h4>
+                </div>
+                <div>
+                    <img src="assets/img/classes/dio/drakar.png" alt="">
+                    <h3 class="char__descricaoclasse">Drakar</h3>
+                    <h4 class="char__descricaoclasse">Arma: Deathstar</h4>
+                </div>
+                <div>
+                    <img src="assets/img/classes/dio/dio_info2.png" alt="">
+                    <h3 class="char__descricaoclasse">Leviatã</h3>
+                    <h4 class="char__descricaoclasse">Arma: Deathstar</h4>
+                </div>
+                <div>
+                    <img src="assets/img/classes/dio/asmodeus.png" alt="">
+                    <h3 class="char__descricaoclasse">Asmodeus</h3>
+                    <h4 class="char__descricaoclasse">Arma: Deathstar</h4>
+                </div>
+            </div>
+            <br><br><br>
+            <h2 class="char__subtitulo">Habilidade especial</h2>
+            <br><br>
+            <div class="char__info">
+                <div>
+                    <h2 class="char__subtitulo">Pontos de Ação</h2>
+                    <span>
+                        Diferente dos outros personagens, Dio, Zero, Rey, Lupus e Veigas possuem uma função chamada
+                        "Pontos de Ação" ou Action Points (abreviado como PA, ou AP em inglês) que é marcada por
+                        habilidades e alguns ataques comuns; basicamente substituindo o "MP". Utilizando a sua Árvore de
+                        Talentos, Dio é capaz de usar até cinco habilidades quer se trate de habilidades letais ou de
+                        técnicas simples. Diferente daquelas de MP, as técnicas e habilidades de um personagem de AP são
+                        ativadas através de teclas, invés de carregar para usar uma habilidade.
+                        <br><br>
+                        No centro superior da tela, as cinco habilidades se acenderão. Isso significa que elas estão
+                        prontas para serem usadas. A interface de comando com AP usa A, S, D, F e G.
+                        Porém, isso muda o Ataque da Mascote para a tecla LeftShift e o Provocar para a tecla V.
+                        <br><br>
+                        Diferente dos outros personagens, os personagens de AP não ganham energia ao golpear os
+                        inimigos, mas sim esperando. Porém, por ele ser tecnicamente baseado em Mana, ele absorverá os
+                        fluidos das poções, itens e propriedades da armadura.
+                        <br><br>
+                        Se um personagem de AP receber um Contra-ataque, porém, todas as habilidades recebem um máximo
+                        de 10 segundos de carregamento. Isso pode ser reduzido para 9 ou 8 com o "Reduzir Recuperação
+                        Após Contra-Ataque", apesar de nem todos os personagens de AP o possuírem.
+                    </span>
+                </div>
+                <img src="assets/img/classes/dio/AP.png" style="height: 100px;">
+            </div>
+            <br><br>
+            <div class="char__info">
+                <div>
+                    <h2 class="char__subtitulo">Empilhamento de Classes</h2>
+                    <span>
+                        À medida que qualquer personagem de AP (Dio, Zero, Rey e Lupus) evolui mais e mais, ele fica
+                        mais forte e mais letal. Porém, é impossível voltar para as classes anteriores, já que todas
+                        elas são como uma só. Enquanto os personagens de AP absorvem mais poder, eles são capazes de
+                        usar habilidades das suas classes futuras e ainda usar aquelas das classes anteriores.
+                        <br><br>
+                        De acordo com as informações do Drakar, Dio selou a maior parte dos seus poderes, deste modo ele
+                        eventualmente os recuperaria no futuro. Isso explica como e por que ele pode "empilhar" as suas
+                        classes.
+                    </span>
+                </div>
+            </div>
+            <br><br>
+        </div>
+        <script src="assets/js/scrollreveal.min.js"></script>
+        <script src="assets/js/comandosCSS.js"></script>
+</body>
+
+</html>
+<script>
+    const srr = ScrollReveal({
+        origin: 'top',
+        distance: '60px',
+        duration: 2500,
+        delay: 300
+    });
+
+    srr.reveal('.char__container')
+    srr.reveal('.char__container .char__info', { interval: 300 })
+</script>

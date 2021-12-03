@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="assets/img/logo_gc.png" type="image/x-icon">
+    <script src="assets/js/sweetalert.js"></script>
+    <script src="assets/js/alertas.js"></script>
+    <title>The Best Chasers</title>
+</head>
+
+<body class="body__acesso" onload="validarSessao()">
+    
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <img src="assets/img/Site-logo.png" alt="" class="nav__logo-img">
+                The Best Chasers
+            </a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#paginainicial" class="nav__link">Olá, <span id="nome_user"></span></a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="acesso.html" class="nav__link">Personagens</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="comentarios.html" class="nav__link">Comentários</a>
+                    </li>
+                    <a href="index.html" class="button button--ghost" onload="limparSessao()">Sair</a>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="bx bx-x"></i>
+                </div>
+
+                <img src="assets/img/nav-dio.png" alt="" class="nav__img">
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="bx bx-grid-alt"></i>
+            </div>
+        </nav>
+    </header>
+
+    <h1 class="char__titulo">Veigas</h2>
+
+        <div class="char__container container">
+            <div class="char__info">
+                <div>
+                    <h2 class="char__subtitulo">Informações Principais do Personagem</h2>
+                    <br>
+                    Nome: Veigas Terr
+                    <br>
+                    Idade: Impossível ser calculada por parâmetros humanos
+                    <br>
+                    Origem: Elyos
+                    <br>
+                    Atividade: Conversar com Deus
+                    <br>
+                    Gosta: Tudo que é Caos, Destruição e Morte
+                    <br>
+                    Ponto fraco: Alturas
+                </div>
+                <img src="assets/img/veigas.png" alt="">
+            </div>
+            <br><br>
+            <div class="char__info">
+                <img src="assets/img/veigas2.png" alt="">
+                <div>
+                    <span> Veigas Terr é o líder da família Terr, núcleo das famílias radicais, e foi um dos que enviou
+                        seus exércitos à Primeira Guerra Mágica de Elyos contra Ernas e apesar de ser muito velho para
+                        os padrões humanos, em Elyos ele é considerado um jovem e verdadeiro prodígio, já que até onde
+                        se sabe, foi escolhido pelo próprio Criador para destruir outras dimensões.
+                        <br><br>
+                        Com seus planos frustrados em relação a destruir Calnat, Veigas se irritou profundamente e
+                        resolveu ir atrás de Dio, o líder da família Burning Canyon, núcleo do grupo moderador, que
+                        estava em Ernas, e destruir o asmodiano e a dimensão dos humanos com as suas próprias mãos. Ao
+                        sair de Elyos pela ponte dos mundos, Trivia, Veigas foi desafiado por um dos monstros
+                        devoradores de almas, que mencionou que ele não conseguiria ter sua vingança contra Dio, pois os
+                        Doze Discípulos entrariam em seu caminho exatamente como fizeram com Astaroth.
+                    </span>
+                </div>
+            </div>
+            <br><br>
+            <div class="char__info">
+                <div>
+                    <span>
+                        A resposta de Veigas foi declarar a destruição de Ernas e dos Doze Discípulos por suas próprias
+                        mãos. Com auxilio de sua poderosa arma mágica, o Tesserato (um cubo), Veigas deu início a uma
+                        antiga profecia que dizia que o sacrifício de 12 humanos escolhidos traria de volta a paz à
+                        Ernas.
+                        <br><br>
+                        Contudo, a profecia veio invertida do mundo dos demônios. Apesar dos avisos da Amy, que
+                        relatavam a verdade sobre a profecia, a equipe da Grand Chase não deu ouvidos à escolhida pelos
+                        deuses. Isso porque um guerreiro mágico trouxe a mensagem de que o traidor seria aquele capaz de
+                        receber oráculos, mensagens divinas. E assim teve início à profecia, trazendo de volta uma das
+                        maiores vilãs que a Grand Chase já enfrentou: Cazeaje.
+                    </span>
+                </div>
+                <img src="assets/img/classes/veigas/veigas_info.png" alt="">
+            </div>
+            <br><br><br>
+            <h2 class="char__subtitulo">Classes</h2>
+            <br>
+            <div class="char__info" style="justify-content: center;">
+                <div>
+                    <img src="assets/img/classes/veigas/destruidor.png" alt="">
+                    <h3 class="char__descricaoclasse">Destruidor</h3>
+                    <h4 class="char__descricaoclasse">Arma: Tesserato</h4>
+                </div>
+            </div>
+            <br><br><br>
+        </div>
+        <script src="assets/js/scrollreveal.min.js"></script>
+        <script src="assets/js/comandosCSS.js"></script>
+</body>
+
+</html>
+<script>
+    const srr = ScrollReveal({
+        origin: 'top',
+        distance: '60px',
+        duration: 2500,
+        delay: 300
+    });
+
+    srr.reveal('.char__container')
+    srr.reveal('.char__container .char__info', { interval: 300 })
+</script>

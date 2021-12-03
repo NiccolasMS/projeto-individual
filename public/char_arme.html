@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="assets/img/logo_gc.png" type="image/x-icon">
+    <script src="assets/js/sweetalert.js"></script>
+    <script src="assets/js/alertas.js"></script>
+    <title>The Best Chasers</title>
+</head>
+
+<body class="body__acesso" onload="validarSessao()">
+
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <img src="assets/img/Site-logo.png" alt="" class="nav__logo-img">
+                The Best Chasers
+            </a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#paginainicial" class="nav__link">Olá, <span id="nome_user"></span></a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="acesso.html" class="nav__link">Personagens</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="comentarios.html" class="nav__link">Comentários</a>
+                    </li>
+                    <a href="index.html" class="button button--ghost" onload="limparSessao()">Sair</a>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="bx bx-x"></i>
+                </div>
+
+                <img src="assets/img/nav-dio.png" alt="" class="nav__img">
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="bx bx-grid-alt"></i>
+            </div>
+        </nav>
+    </header>
+
+    <h1 class="char__titulo">Arme</h2>
+
+        <div class="char__container container">
+            <div class="char__info">
+                <div>
+                    <h2 class="char__subtitulo">Informações Principais do Personagem</h2>
+                    <br>
+                    Nome: Arme Glenstid
+                    <br>
+                    Idade: 17 anos
+                    <br>
+                    Origem: Serdin
+                    <br>
+                    Hobbies: Colecionar objetos mágicos
+                    <br>
+                    Gostos: Estudar magia, cheiro de papel velho
+                    <br>
+                    Não Gosta: Ser tratada como uma criança
+                    <br>
+                    Fraquezas: Comida apimentada, estantes de livros muito altas
+                </div>
+                <img src="assets/img/arme.png" alt="">
+            </div>
+            <div class="char__info">
+                <img src="assets/img/classes/arme/arme_info.png" alt="">
+                <div>
+                    <span> Alegre e ingênua, Arme é a principal maga da Grand Chase. Vinda de Serdin, o reino famoso por
+                        seus magos e pela Academia de Magia Violeta. Arme tem uma personalidade mais infantil e
+                        inocente, que esconde o grande poder que ela carrega. Arme demonstra grande interesse pela
+                        magia, e adora estudar sobre o assunto. Ela acredita que essa força deve ser usada apenas para o
+                        bem e não medirá esforços para impedir que as forças das trevas abusem do poder da magia.
+                        <br><br>
+                        Ela nasceu com um enorme poder mágico e abandonada por seus pais, que temiam a tal poder.
+                        <br><br>
+                        Ela foi abandonada em frente a porta da Academia de Magia Violeta, e o Serre, o diretor da
+                        academia, a trouxe e a criou, sendo avô adotivo de arme.
+                    </span>
+                </div>
+            </div>
+            <div class="char__info">
+                <div>
+                    <span>
+                        Virgem de emoções sensíveis e anseio por coisas desconhecidas. Ela trabalha muito e é uma mulher
+                        de espírito, e também é um tanto impulsiva e fora da parede.
+                        <br><br>
+                        Ela ama magia e estuda duro, mas ela é uma maga nascido adquirindo magia negra e magia branca ao
+                        mesmo tempo.
+                        <br><br>
+                        Ela gosta de encontrar documentos antigos relevantes para a magia, novo espírito, as coisas ou
+                        os minerais que a magia habita.
+                        <br><br>
+                        Arme é a mais jovem dos três membros iniciais do Grand Chase. Às vezes, ela parece infantil e
+                        imatura, mas ela tem coragem para enfrentar inimigos enormes.
+                    </span>
+                </div>
+                <img src="assets/img/arme2.png" alt="">
+            </div>
+            <br><br>
+            <h2 class="char__subtitulo">Classes</h2>
+            <br>
+            <div class="char__info">
+                <div>
+                    <img src="assets/img/classes/arme/maga.png" style="height: 324px;"><br>
+                    <h3 class="char__descricaoclasse">Maga</h3>
+                    <h4 class="char__descricaoclasse">Arma: Cetro</h4>
+                </div>
+                <div>
+                    <img src="assets/img/classes/arme/alquimista.png" style="height: 324px;">
+                    <h3 class="char__descricaoclasse">Alquimista</h3>
+                    <h4 class="char__descricaoclasse">Arma: Pote</h4>
+                </div>
+                <div>
+                    <img src="assets/img/classes/arme/feiticeira.png" style="height: 324px;">
+                    <h3 class="char__descricaoclasse">Feiticeira</h3>
+                    <h4 class="char__descricaoclasse">Arma: Lâmpada</h4>
+                </div>
+                <div>
+                    <img src="assets/img/classes/arme/arquimaga.png" style="height: 324px;">
+                    <h3 class="char__descricaoclasse">Arquimaga</h3>
+                    <h4 class="char__descricaoclasse">Arma: Cajado</h4>
+                </div>
+            </div>
+            <br><br><br>
+            <h2 class="char__subtitulo">Habilidade especial</h2>
+            <br><br>
+            <div class="char__info">
+                <div>
+                    <h2 class="char__subtitulo">Meditação</h2>
+                    <span>
+                        Quando as classes da Arme ficam paradas por alguns segundos, elas regenerarão o seu MP dizendo
+                        "Espíritos do fogo, água e terra, me deem forças!"
+                        <br><br>
+                        Com a Arquimaga, ela não pode usar a Meditação quando está no Fatal porque ela precisa se
+                        "apoiar" no cajado quando está assim.
+                    </span>
+                </div>
+                <img src="assets/img/classes/arme/arme_meditação.png" style="height: 100px; margin-left: 20px;">
+            </div>
+            <br><br>
+            <div class="char__info">
+                <img src="assets/img/classes/arme/arme_teleportar.png" style="height: 100px; margin-right: 20px;">
+                <div>
+                    <h2 class="char__subtitulo">Teleportar</h2>
+                    <span>
+                        Teleportar permite ao usuário a "passar" através de um obstáculo ou inimigo. Todas os ataques na
+                        corrida da Arme são modificados para atravessar o alvo, o que pode dar uma vantagem maior no
+                        campo de batalha.
+                    </span>
+                </div>
+            </div>
+            <br><br>
+            <div class="char__info">
+                <div>
+                    <h2 class="char__subtitulo">Nascer com MP</h2>
+                    <span>
+                        Quando as classes da Arme nascem em um campo de batalha, elas sempre terão uma barra e meia de
+                        MP já carregada. Isso pode dar uma "vantagem".
+                    </span>
+                </div>
+            </div>
+            <br><br>
+        </div>
+        <script src="assets/js/scrollreveal.min.js"></script>
+        <script src="assets/js/comandosCSS.js"></script>
+</body>
+
+</html>
+<script>
+    const srr = ScrollReveal({
+        origin: 'top',
+        distance: '60px',
+        duration: 2500,
+        delay: 300
+    });
+
+    srr.reveal('.char__container')
+    srr.reveal('.char__container .char__info', { interval: 300 })
+</script>

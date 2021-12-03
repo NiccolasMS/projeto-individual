@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="assets/img/logo_gc.png" type="image/x-icon">
+    <script src="assets/js/sweetalert.js"></script>
+    <script src="assets/js/alertas.js"></script>
+    <title>The Best Chasers</title>
+</head>
+
+<body class="body__acesso" onload="validarSessao()">
+    
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <img src="assets/img/Site-logo.png" alt="" class="nav__logo-img">
+                The Best Chasers
+            </a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#paginainicial" class="nav__link">Olá, <span id="nome_user"></span></a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="acesso.html" class="nav__link">Personagens</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="comentarios.html" class="nav__link">Comentários</a>
+                    </li>
+                    <a href="index.html" class="button button--ghost" onload="limparSessao()">Sair</a>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="bx bx-x"></i>
+                </div>
+
+                <img src="assets/img/nav-dio.png" alt="" class="nav__img">
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="bx bx-grid-alt"></i>
+            </div>
+        </nav>
+    </header>
+
+    <h1 class="char__titulo">Lass</h2>
+
+        <div class="char__container container">
+            <div class="char__info">
+                <div>
+                    <h2 class="char__subtitulo">Informações Principais do Personagem</h2>
+                    <br>
+                    Nome: Lass Isolet
+                    <br>
+                    Idade: desconhecida
+                    <br>
+                    Origem: Cidade da Cruz de Prata
+                    <br>
+                    Hobbies: Desconhecido
+                    <br>
+                    Gostos: Privacidade, sombras, velocidade
+                    <br>
+                    Não Gosta: Cazeaje, circos, barulho
+                    <br>
+                    Fraquezas: Cães
+                </div>
+                <img src="assets/img/lass.png" alt="">
+            </div>
+            <div class="char__info">
+                <img src="assets/img/classes/lass/lass_info.png" style="margin-right: 20px;">
+                <div>
+                    <span> Pouco se sabe sobre o passado de Lass. Por muitos anos, o corpo do garoto foi usado por
+                        Cazeaje, que o possuiu para se aproveitar de suas habilidades especiais. Quando ele finalmente
+                        foi libertado do controle da Rainha das Trevas pela Grand Chase, decidiu se unir ao grupo para
+                        se redimir pelas ações que foi forçado a cometer em nome de Cazeaje.
+                    </span>
+                </div>
+            </div>
+            <div class="char__info">
+                <div>
+                    <span>
+                        Isso fez com que o garoto se tornasse mais introspectivo e com sede de vingança, buscando sempre
+                        punir as forças das trevas que usem pessoas inocentes para seus propósitos malignos. Não se sabe
+                        ao certo o que Lass recorda de sua vida anterior, mas o garoto agora sabe que sempre carregará
+                        as trevas em seu interior, lutando constantemente para nunca mais ser dominado por elas.
+                    </span>
+                </div>
+                <img src="assets/img/classes/lass/lass_info2.png" alt="">
+            </div>
+            <br><br>
+            <h2 class="char__subtitulo">Classes</h2>
+            <br>
+            <div class="char__info">
+                <div>
+                    <img src="assets/img/classes/lass/ninja.png" alt=""><br>
+                    <h3 class="char__descricaoclasse">Ninja</h3>
+                    <h4 class="char__descricaoclasse">Arma: Adagas</h4>
+                </div>
+                <div>
+                    <img src="assets/img/classes/lass/mercenário.png" alt="">
+                    <h3 class="char__descricaoclasse">Mercenário</h3>
+                    <h4 class="char__descricaoclasse">Arma: Alfange</h4>
+                </div>
+                <div>
+                    <img src="assets/img/classes/lass/vingador.png" alt="">
+                    <h3 class="char__descricaoclasse">Vingador</h3>
+                    <h4 class="char__descricaoclasse">Arma: Garras</h4>
+                </div>
+                <div>
+                    <img src="assets/img/classes/lass/retalhador.png" alt="">
+                    <h3 class="char__descricaoclasse">Retalhador</h3>
+                    <h4 class="char__descricaoclasse">Arma: Katana</h4>
+                </div>
+            </div>
+            <br><br><br>
+            <div class="char__info">
+                <div>
+                    <h2 class="char__subtitulo">Chefe</h2>
+                    <span>
+                        Lass é o primeiro chefe na fase onde você luta contra o semichefe no Castelo Cazeaje. O Lass do
+                        Castelo Cazeaje tem ataques bem similares aos ataques do Ninja. A fase pode ser vista como uma
+                        luta de PvP; entretanto, o Ataque Final não pode matar e ele passa pelo chão sem explosões, ele
+                        não possui o Ataque Fatal nem a Árvore de Talentos, e os jogadores não podem dar agarrões.
+                </div>
+                <img src="assets/img/classes/lass/lass_chefe.png" style="height: 200px; margin-bottom: 50px; margin-left: 20px;">
+                
+        </div>
+        <script src="assets/js/scrollreveal.min.js"></script>
+        <script src="assets/js/comandosCSS.js"></script>
+</body>
+
+</html>
+<script>
+    const srr = ScrollReveal({
+        origin: 'top',
+        distance: '60px',
+        duration: 2500,
+        delay: 300
+    });
+
+    srr.reveal('.char__container')
+    srr.reveal('.char__container .char__info', { interval: 300 })
+</script>
