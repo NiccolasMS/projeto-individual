@@ -52,5 +52,3 @@ SELECT * from personagens;
 SELECT * from usuario;
 
 SELECT * from aviso;
-
-truncate table aviso;
